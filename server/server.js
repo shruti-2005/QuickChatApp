@@ -51,7 +51,7 @@ await connectDB();
 
 app.use("/api/status", (req,res)=>res.send("Server is live"));
 app.use("/api/auth",userRouter);
-app.use("api/messages",messageRouter);
+app.use("/api/messages",messageRouter);
 
 const PORT = process.env.PORT || 5000
 server.listen(PORT , ()=>console.log("Server is running on PORT:" + PORT));
